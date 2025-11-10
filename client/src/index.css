@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+
+  /* VITA 2.0 Dark Theme */
+  --background: 0 0% 6%; /* #0f0f0f */
+  --foreground: 0 0% 98%; /* #fafafa */
+
+  --card: 0 0% 9%;
+  --card-foreground: 0 0% 98%;
+  --card-border: 0 0% 15%;
+
+  --popover: 0 0% 9%;
+  --popover-foreground: 0 0% 98%;
+  --popover-border: 0 0% 15%;
+
+  --primary: 74 100% 50%; /* #c6ff00 - VITA lime green */
+  --primary-foreground: 0 0% 6%;
+  --primary-border: 74 100% 50%;
+
+  --secondary: 72 90% 55%; /* #b5e600 */
+  --secondary-foreground: 0 0% 6%;
+  --secondary-border: 72 90% 55%;
+
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;
+  --muted-border: 0 0% 20%;
+
+  --accent: 74 100% 50%;
+  --accent-foreground: 0 0% 6%;
+  --accent-border: 74 100% 50%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --destructive-border: 0 84% 60%;
+
+  --border: 0 0% 15%;
+  --input: 0 0% 15%;
+  --ring: 74 100% 50%;
+
+  --sidebar: 0 0% 9%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-border: 0 0% 15%;
+  --sidebar-ring: 74 100% 50%;
+
+  --sidebar-primary: 74 100% 50%;
+  --sidebar-primary-foreground: 0 0% 6%;
+  --sidebar-primary-border: 74 100% 50%;
+
+  --sidebar-accent: 0 0% 15%;
+  --sidebar-accent-foreground: 0 0% 98%;
+  --sidebar-accent-border: 0 0% 20%;
+
+  --chart-1: 74 100% 50%;
+  --chart-2: 72 90% 55%;
+  --chart-3: 70 80% 60%;
+  --chart-4: 0 0% 40%;
+  --chart-5: 0 0% 60%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  letter-spacing: -0.003em;
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
